@@ -38,22 +38,27 @@ function App() {
     };
 
     return (
-        <div className="container">
-            <h1 className="title">Motor de Inferencia</h1>
-            <InferenceForm
-                reglas={reglas}
-                hechos={hechos}
-                objetivo={objetivo}
-                metodo={metodo}
-                setReglas={setReglas}
-                setHechos={setHechos}
-                setObjetivo={setObjetivo}
-                setMetodo={setMetodo}
-                handleEvaluar={handleEvaluar}
-            />
-            <ResultDisplay resultado={resultado} />
-            <ProcessHistory historial={historial} />
-        </div>
+        <>
+            <div className='background'>
+                <div className="container">
+                    <h1 className="title">Motor de Inferencia</h1>
+                    <h2 className="developer">Desarrollado por: José Eduardo Velazco Jiménez</h2>
+                    <InferenceForm
+                        reglas={reglas}
+                        hechos={hechos}
+                        objetivo={objetivo}
+                        metodo={metodo}
+                        setReglas={setReglas}
+                        setHechos={setHechos}
+                        setObjetivo={setObjetivo}
+                        setMetodo={setMetodo}
+                        handleEvaluar={handleEvaluar}
+                    />
+                    <ResultDisplay resultado={resultado} />
+                    <ProcessHistory historial={historial} />
+                </div>
+            </div>
+        </>
     );
 }
 

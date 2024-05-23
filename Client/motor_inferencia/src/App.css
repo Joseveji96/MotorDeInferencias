@@ -1,28 +1,63 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+.background {
+  height: 100%;
+  padding: 10px;
+  position:-ms-page;
+  background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
   max-width: 800px;
+  margin: 50px auto;
+  padding-bottom: 0px;
 }
 
+/* A, B -> C
+A -> D
+C, D -> E
+B, E, F -> G
+A, E -> H
+D, E, H-> I */
+/* 
+A
+B 
+F 
+
+H */
+
 .title {
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
   color: #202124;
+}
+
+.developer{
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.form-group {
+  flex: 1;
 }
 
 .inference-form h2, .resultado h2, .historial h2 {
@@ -34,9 +69,11 @@ body {
 textarea, input, select {
   width: 100%;
   padding: 10px;
-  margin: 5px 0 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 4px;
+  resize: vertical;
 }
 
 .button-container {
@@ -44,13 +81,14 @@ textarea, input, select {
 }
 
 button {
-  background-color: #4285f4;
+  background-color: #63e;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 50px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 25px;
 }
 
 button:hover {
